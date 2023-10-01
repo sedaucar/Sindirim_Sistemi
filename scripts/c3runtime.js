@@ -4120,7 +4120,6 @@ self.C3_GetObjectRefTable = function () {
 		C3.Plugins.Audio.Acts.Play,
 		C3.Plugins.Sprite.Acts.SetAnimFrame,
 		C3.Plugins.System.Cnds.OnLayoutStart,
-		C3.Plugins.Audio.Acts.StopAll,
 		C3.Plugins.Audio.Acts.Stop,
 		C3.Plugins.System.Cnds.OnLayoutEnd,
 		C3.Plugins.Sprite.Acts.SetVisible,
@@ -4317,22 +4316,21 @@ function or(l, r)
 
 self.C3_ExpressionFuncs = [
 		() => 0.2,
-		() => -10,
 		() => 0,
 		() => "music",
 		() => 1,
 		() => 2,
 		() => 30,
 		() => "sound1",
-		() => 10,
+		() => 12,
 		() => "sound2",
 		() => 100,
-		() => "",
 		p => {
 			const n0 = p._GetNode(0);
 			return () => n0.ExpObject();
 		},
 		() => 80,
+		() => "",
 		() => 9,
 		p => {
 			const f0 = p._GetNode(0).GetBoundMethod();
